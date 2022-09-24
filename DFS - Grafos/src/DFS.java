@@ -11,10 +11,11 @@ public class DFS {
     public DFS(Graph g, int inicial_vertice) {
         this.inicial_vertice = inicial_vertice;
         this.graph = g.getListAdj();
-        this.color = new int[g.getNumber_of_vertex()];
-        this.ant = new int[g.getNumber_of_vertex()];
-        this.i = new int[g.getNumber_of_vertex()];
-        this.f = new int[g.getNumber_of_vertex()];
+        int order = g.getNumber_of_vertex();
+        this.color = new int[order];
+        this.ant = new int[order];
+        this.i = new int[order];
+        this.f = new int[order];
 
     }
 
