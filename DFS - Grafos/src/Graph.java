@@ -9,6 +9,10 @@ public class Graph {
     private int number_of_edge;
     private LinkedList<LinkedList<Integer>> listAdj;
 
+    public int getNumber_of_vertex() {
+        return number_of_vertex;
+    }
+
     public int getNumber_of_edge() {
         return number_of_edge;
     }

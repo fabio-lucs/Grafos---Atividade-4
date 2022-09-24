@@ -1,13 +1,14 @@
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
-        Graph g = new Graph("src/pequenoG.txt");
-        // g.printListAdj();
 
-        // Atividade 4 - Implementação DFS      
-        DFS dfs = new DFS(g);
-        int start = 0; // Escolha do vértice de início
+    public static void main(String[] args) throws IOException {
 
-        
+        Graph grafo = new Graph("DFS - Grafos/src/pequenoG.txt");
+        int s = 0;
+        DFS busca_em_Profundidade = new DFS(grafo, s);
+        busca_em_Profundidade.start();
 
     }
+
 }
