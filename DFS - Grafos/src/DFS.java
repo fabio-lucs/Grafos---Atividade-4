@@ -35,7 +35,7 @@ public class DFS {
         for (Integer v : this.graph.get(u)) {
             if ((color[v] == white)) {
                 ant[v] = u;
-                // detalhesVertices(); //exibe situação dos vértices a cada iteração
+                vertice_info();
                 printPath(v);
                 DFS_Visit(v);
             }
@@ -44,15 +44,25 @@ public class DFS {
         f[u] = time++;
     }
 
+    private void vertice_info() {
+        for (int index = 0; index < graph.size(); index++) {
+            System.out.println(
+                    "Vértice: " + index + " => cor: " + color[index] + " | (" + i[index] + "/" + f[index] + ")");
+        }
+    }
+
     private void printPath(Integer v) {
         if (v == this.inicial_vertice) {
-            System.out.println(v);
+            System.out.print(v);
+            System.out.println();
         } else {
             if (ant[v] == -1) {
                 System.out.println("Não há caminho!");
             } else {
                 printPath(ant[v]);
-                System.out.println(v);
+                System.out.print(v);            
+                System.out.println();
+                
             }
         }
     }
